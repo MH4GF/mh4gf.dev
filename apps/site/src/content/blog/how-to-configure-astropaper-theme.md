@@ -8,7 +8,7 @@ draft: false
 tags:
   - configuration
   - docs
-ogImage: ""
+ogImage: ''
 description: How you can make AstroPaper theme absolutely yours.
 ---
 
@@ -25,14 +25,14 @@ Another important configurations lies in `src/config.ts` file. Within that file,
 ```js
 // file: src/config.ts
 export const SITE = {
-  website: "https://astro-paper.pages.dev/",
-  author: "Sat Naing",
-  desc: "A minimal, responsive and SEO-friendly Astro blog theme.",
-  title: "AstroPaper",
-  ogImage: "astropaper-og.jpg",
+  website: 'https://astro-paper.pages.dev/',
+  author: 'Sat Naing',
+  desc: 'A minimal, responsive and SEO-friendly Astro blog theme.',
+  title: 'AstroPaper',
+  ogImage: 'astropaper-og.jpg',
   lightAndDarkMode: true,
   postPerPage: 3,
-};
+}
 ```
 
 Here are SITE configuration options
@@ -60,7 +60,7 @@ export const LOGO_IMAGE = {
   svg: true,
   width: 216,
   height: 46,
-};
+}
 ```
 
 If you specify `LOGO_IMAGE.enable` => `false`, AstroPaper will automatically convert `SITE.title` to the main site text logo.
@@ -135,7 +135,7 @@ linkTitle: `${SITE.title} on Twitter`,
 to
 
 ```js
-linkTitle: `Follow ${SITE.title} on Twitter`;
+linkTitle: `Follow ${SITE.title} on Twitter`
 ```
 
 ## Conclusion

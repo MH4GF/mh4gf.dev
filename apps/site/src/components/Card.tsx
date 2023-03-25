@@ -2,8 +2,6 @@ import Datetime from './Datetime'
 
 import type { BlogFrontmatter } from '@content/_schemas'
 
-
-
 export interface Props {
   href?: string
   frontmatter: BlogFrontmatter

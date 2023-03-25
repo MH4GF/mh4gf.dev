@@ -3,7 +3,6 @@ import satori from 'satori'
 
 import { SITE } from '@config'
 
-
 const fetchFonts = async () => {
   // Regular Font
   const fontFileRegular = await fetch(

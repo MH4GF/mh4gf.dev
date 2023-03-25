@@ -1,4 +1,3 @@
-
 import Fuse from 'fuse.js'
 import { useEffect, useRef, useState } from 'react'
 
