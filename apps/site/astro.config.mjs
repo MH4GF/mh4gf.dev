@@ -35,4 +35,12 @@ export default defineConfig({
     },
     extendDefaultPlugins: true,
   },
+  vite: {
+    optimizeDeps: {
+      exclude: [
+        // https://stackoverflow.com/questions/75640753/vite-esbuild-error-no-loader-is-configured-for-node-files-node-modules-fs
+        'fsevents',
+      ],
+    },
+  },
 })

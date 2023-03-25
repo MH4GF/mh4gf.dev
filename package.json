@@ -7,6 +7,8 @@
     "format": "turbo run format",
     "dev": "turbo run dev",
     "build": "turbo run build",
+    "test": "turbo run test",
+    "test:site:update": "docker run --rm --network host -v $(pwd):/work/ -w /work/apps/site -it mcr.microsoft.com/playwright:v1.32.1-focal /bin/bash -c 'npm test -- -u'",
     "scaffold": "scaffdog generate"
   },
   "keywords": [],
