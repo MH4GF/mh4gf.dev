@@ -6,11 +6,14 @@
     "lint": "turbo run lint",
     "format": "turbo run format",
     "dev": "turbo run dev",
-    "build": "turbo run build"
+    "build": "turbo run build",
+    "scaffold": "scaffdog generate"
   },
   "keywords": [],
   "author": "MH$GF",
   "devDependencies": {
+    "@tsconfig/strictest": "^1.0.2",
+    "scaffdog": "^2.5.0",
     "turbo": "^1.8.5"
   }
 }

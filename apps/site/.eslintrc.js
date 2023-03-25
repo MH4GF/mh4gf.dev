@@ -6,7 +6,7 @@ module.exports = {
     es2022: true,
     browser: true,
   },
-  extends: ['eslint:recommended', 'plugin:astro/recommended', '@mh4gf'],
+  extends: ['../../.eslintrc.base.js', 'plugin:astro/recommended'],
   parserOptions: {
     ecmaVersion: 'latest',
     sourceType: 'module',
