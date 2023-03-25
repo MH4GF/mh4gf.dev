@@ -1,0 +1,16 @@
+{
+  "$schema": "https://turbo.build/schema.json",
+  "baseBranch": "origin/main",
+  "extends": [
+    "//"
+  ],
+  "pipeline": {
+    "dev": {},
+    "build": {},
+    "lint": {
+      "dependsOn": ["sync"]
+    },
+    "format": {},
+    "test": {}
+  }
+}
