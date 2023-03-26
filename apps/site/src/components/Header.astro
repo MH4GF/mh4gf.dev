@@ -1,17 +1,16 @@
 ---
-import { LOGO_IMAGE, SITE, BLOG } from '@config'
+import { LOGO_IMAGE, SITE } from '@config'
 import Hr from './Hr.astro'
 // import LinkButton from './LinkButton.astro'
 
 import logoPNG from '/assets/logo.png'
 import logoSVG from '/assets/logo.svg'
-import ExternalLinkIcon from './ExternalLinkIcon.astro'
 
 export interface Props {
-  activeNav?: 'posts' | 'tags' | 'about' | 'search'
+  activeNav?: 'activities' | 'tags' | 'about' | 'search'
 }
 
-// const { activeNav } = Astro.props
+const { activeNav } = Astro.props
 ---
 
 <header>
@@ -47,11 +46,8 @@ export interface Props {
         </button>
         <ul id="menu-items" class="display-none sm:flex">
           <li>
-            <a href={BLOG} target="_blank" rel="noopener noreferrer">Blog<ExternalLinkIcon /></a>
+            <a href="/activities" class={activeNav === 'activities' ? 'active' : ''}> Activities</a>
           </li>
-          <!-- <li>
-            <a href="/posts" class={activeNav === 'posts' ? 'active' : ''}> Posts</a>
-          </li> -->
           <!-- <li>
             <a href="/tags" class={activeNav === 'tags' ? 'active' : ''}> Tags</a>
           </li> -->

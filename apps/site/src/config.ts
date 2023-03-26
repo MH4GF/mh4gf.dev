@@ -17,8 +17,6 @@ export const LOGO_IMAGE = {
   height: 46,
 }
 
-export const BLOG = 'https://log.mh4gf.dev'
-
 export const SOCIALS: SocialObjects = [
   {
     name: 'Github',
