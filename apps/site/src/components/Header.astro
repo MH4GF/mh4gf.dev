@@ -5,7 +5,7 @@ import Hr from './Hr.astro'
 
 import logoPNG from '/assets/logo.png'
 import logoSVG from '/assets/logo.svg'
-import ExternalLinkIcon from './ExternalLinkIcon.astro'
+import ExternalLink from './ExternalLink.astro'
 
 export interface Props {
   activeNav?: 'activities' | 'tags' | 'about' | 'search'
@@ -47,7 +47,7 @@ const { activeNav } = Astro.props
         </button>
         <ul id="menu-items" class="display-none sm:flex">
           <li>
-            <a href={BLOG} target="_blank" rel="noopener noreferrer">Blog<ExternalLinkIcon /></a>
+            <ExternalLink href={BLOG}>Blog</ExternalLink>
           </li>
           <li>
             <a href="/activities" class={activeNav === 'activities' ? 'active' : ''}> Activities</a>
