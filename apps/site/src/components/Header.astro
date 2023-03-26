@@ -1,12 +1,10 @@
 ---
-import { LOGO_IMAGE, SITE, BLOG } from '@config'
+import { LOGO_IMAGE, SITE } from '@config'
 import Hr from './Hr.astro'
 // import LinkButton from './LinkButton.astro'
 
 import logoPNG from '/assets/logo.png'
 import logoSVG from '/assets/logo.svg'
-import ExternalLink from './ExternalLink.astro'
-import ExternalLinkIcon from './ExternalLinkIcon.astro'
 
 export interface Props {
   activeNav?: 'activities' | 'tags' | 'about' | 'search'
@@ -47,9 +45,6 @@ const { activeNav } = Astro.props
           </div>
         </button>
         <ul id="menu-items" class="display-none sm:flex">
-          <li>
-            <ExternalLink href={BLOG}>Blog<ExternalLinkIcon /></ExternalLink>
-          </li>
           <li>
             <a href="/activities" class={activeNav === 'activities' ? 'active' : ''}> Activities</a>
           </li>
