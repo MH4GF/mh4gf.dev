@@ -1,0 +1,23 @@
+---
+import Main from '@layouts/Main.astro'
+import type { Activity } from '../types'
+import Card from './Card.astro'
+import Layout from '@layouts/Layout.astro'
+import Header from '@components/Header.astro'
+import { SITE } from '@config'
+
+export interface Props {
+  activities: Activity[]
+}
+
+const { activities } = Astro.props
+---
+
+<Layout title={`Posts | ${SITE.title}`}>
+  <Header activeNav="activities" />
+  <Main pageTitle="Activities" pageDesc="All the Activities.">
+    <ul>
+      {activities.map((activity) => <Card activity={activity} />)}
+    </ul>
+  </Main>
+</Layout>

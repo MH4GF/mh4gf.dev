@@ -1,0 +1,24 @@
+---
+import Datetime from '@components/Datetime'
+import type { Activity } from '../types'
+import { slugify } from '../utils/slugify'
+
+interface Props {
+  activity: Activity
+}
+
+const { activity } = Astro.props
+const href = slugify(activity)
+const { title, date, description } = activity
+---
+
+<li class="my-6">
+  <a
+    href={href}
+    class="text-skin-accent inline-block text-lg font-medium decoration-dashed underline-offset-4 focus-visible:no-underline focus-visible:underline-offset-0"
+  >
+    <h3 class="text-lg font-medium decoration-dashed hover:underline">{title}</h3>
+  </a>
+  <Datetime datetime={date} />
+  <p>{description}</p>
+</li>

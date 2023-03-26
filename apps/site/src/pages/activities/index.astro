@@ -1,0 +1,8 @@
+---
+import Activities from '@features/activities/components/Activities.astro'
+import { getAllActivities } from '@features/activities/getAllActivities'
+
+const activities = await getAllActivities()
+---
+
+<Activities activities={activities} />

@@ -10,6 +10,7 @@ tags:
   - life
 ogImage: ''
 description: ''
+isExternal: false
 ---
 
 2022 年ももうすぐ終わりですね。毎度のことながら今年も振り返りブログを残します。昨年はこちら。
