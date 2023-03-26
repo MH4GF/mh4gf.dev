@@ -22,7 +22,9 @@ jobs:
         uses: MH4GF/shared-config/.github/composite-actions/setup-pnpm@main
         with:
           node-version-file: .node-version
-          pnpm-version: '7.24.3'
+          pnpm-version: "7.24.3"
+      - name: Setup 👀
+        run: pnpm run setup
       - name: Run linter 👀
         run: pnpm lint
       - name: Run tests 🧪

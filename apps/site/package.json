@@ -2,6 +2,8 @@
   "name": "@mh4gf/site",
   "version": "2.1.0",
   "scripts": {
+    "setup": "run-s -clns setup:*",
+    "setup:playwright": "playwright install --with-deps",
     "dev": "astro dev",
     "start": "astro dev",
     "build": "astro build",
