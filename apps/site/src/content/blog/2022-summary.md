@@ -1,6 +1,6 @@
 ---
 author: Sat Naing
-pubDatetime: 2022-12-31
+date: 2022-12-31
 title: 2022年の振り返り 技術と仕事と生活
 postSlug: 2022-summary
 featured: true
