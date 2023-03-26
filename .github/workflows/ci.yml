@@ -14,18 +14,15 @@ env:
 
 jobs:
   ci:
+    container:
+      image: mcr.microsoft.com/playwright:v1.32.1-focal
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout 🛎
-        uses: actions/checkout@v3
-      - name: Setup node env 🏗
-        uses: MH4GF/shared-config/.github/composite-actions/setup-pnpm@main
+      - uses: actions/checkout@v3
+      - uses: MH4GF/shared-config/.github/composite-actions/setup-pnpm@main
         with:
           node-version-file: .node-version
           pnpm-version: "7.24.3"
-      - name: Setup 👀
-        run: pnpm run setup
-      - name: Run linter 👀
-        run: pnpm lint
-      - name: Run tests 🧪
-        run: pnpm test
+      - run: pnpm run setup
+      - run: pnpm lint
+      - run: pnpm test
