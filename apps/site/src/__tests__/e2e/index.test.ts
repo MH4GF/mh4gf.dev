@@ -1,32 +1,16 @@
 import type { Page } from '@playwright/test'
 import { expect, test } from '@playwright/test'
 
-const setup = async (page: Page, isMobile: boolean) => {
+import { captureScreenshotWithTheme } from './utils/captureScreenshotWithTheme'
+
+const setup = async (page: Page) => {
   await page.goto('/')
   await page.waitForLoadState('networkidle')
-
-  const clickThemeToggleButton = async () => {
-    if (isMobile) {
-      const menuButton = page.getByRole('button', { name: 'Open Menu' })
-      await menuButton.click()
-    }
-    const toggleButton = page.getByRole('button', { name: 'light' })
-    await toggleButton.click()
-  }
-
-  return { clickThemeToggleButton }
 }
 
-test('トップページを開く', async ({ page, isMobile }) => {
-  await setup(page, isMobile)
+test('/', async ({ page, isMobile }) => {
+  await setup(page)
 
   expect(page.getByRole('heading', { name: 'Hirotaka Miyagi' }))
-  await expect(page).toHaveScreenshot()
-})
-
-test('テーマ切り替えができる', async ({ page, isMobile }) => {
-  const { clickThemeToggleButton } = await setup(page, isMobile)
-  await clickThemeToggleButton()
-
-  await expect(page).toHaveScreenshot()
+  await captureScreenshotWithTheme(page, isMobile)
 })

@@ -41,7 +41,7 @@
     focus-visible:no-underline focus-visible:outline-dashed;
   }
   svg {
-    @apply group-hover:fill-skin-accent inline-block h-6 w-6;
+    @apply fill-skin-base group-hover:fill-skin-accent inline-block h-6 w-6;
   }
   svg.icon-tabler {
     @apply inline-block h-6 w-6 scale-125 fill-transparent
@@ -50,7 +50,8 @@
   }
   .prose {
     @apply prose-headings:!mb-3 prose-headings:!text-skin-base
-    prose-h3:prose-p:!text-skin-base
+    prose-h3:!text-skin-base
+    prose-p:!text-skin-base
     prose-a:!text-skin-base prose-a:!decoration-dashed prose-a:underline-offset-8
     hover:prose-a:text-skin-accent prose-blockquote:!border-l-skin-accent
     prose-blockquote:border-opacity-50 prose-blockquote:opacity-80
