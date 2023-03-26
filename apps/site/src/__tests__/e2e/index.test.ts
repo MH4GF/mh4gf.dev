@@ -3,6 +3,7 @@ import { expect, test } from '@playwright/test'
 
 const setup = async (page: Page, isMobile: boolean) => {
   await page.goto('/')
+  await page.waitForLoadState('networkidle')
 
   const clickThemeToggleButton = async () => {
     if (isMobile) {
