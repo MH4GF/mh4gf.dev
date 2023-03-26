@@ -17,7 +17,7 @@
     "lint": "run-s -clns lint:*",
     "lint:eslint": "eslint src --ext .astro,.tsx",
     "lint:prettier": "prettier --cache --check .",
-    "test": "playwright test"
+    "test": "PLAYWRIGHT=true playwright test"
   },
   "dependencies": {
     "@astrojs/mdx": "^0.16.0",
