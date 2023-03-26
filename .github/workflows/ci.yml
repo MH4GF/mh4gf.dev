@@ -26,3 +26,5 @@ jobs:
       - run: pnpm run setup
       - run: pnpm lint
       - run: pnpm test
+        env:
+          HOME: /root
