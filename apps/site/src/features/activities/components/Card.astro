@@ -1,5 +1,7 @@
 ---
 import Datetime from '@components/Datetime'
+import ExternalLink from '@components/ExternalLink.astro'
+import ExternalLinkIcon from '@components/ExternalLinkIcon.astro'
 import type { Activity } from '../types'
 import { slugify } from '../utils/slugify'
 
@@ -9,16 +11,34 @@ interface Props {
 
 const { activity } = Astro.props
 const href = slugify(activity)
-const { title, date, description } = activity
+const { title, date, description, isExternal } = activity
 ---
 
 <li class="my-6">
-  <a
-    href={href}
-    class="text-skin-accent inline-block text-lg font-medium decoration-dashed underline-offset-4 focus-visible:no-underline focus-visible:underline-offset-0"
-  >
-    <h3 class="text-lg font-medium decoration-dashed hover:underline">{title}</h3>
-  </a>
+  {
+    isExternal ? (
+      <ExternalLink href={href} className="link">
+        <h3 class="title">
+          {title}
+          <ExternalLinkIcon />
+        </h3>
+      </ExternalLink>
+    ) : (
+      <a href={href} class="link">
+        <h3 class="title">{title}</h3>
+      </a>
+    )
+  }
   <Datetime datetime={date} />
   <p>{description}</p>
 </li>
+
+<style>
+  .link {
+    @apply text-skin-accent inline-block text-lg font-medium decoration-dashed underline-offset-4 focus-visible:no-underline focus-visible:underline-offset-0;
+  }
+
+  .title {
+    @apply text-lg font-medium decoration-dashed hover:underline;
+  }
+</style>

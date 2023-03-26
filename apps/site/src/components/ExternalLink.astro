@@ -1,14 +1,12 @@
 ---
-import ExternalLinkIcon from './ExternalLinkIcon.astro'
-
 interface Props {
   href: string
+  className?: string
 }
 
-const { href } = Astro.props
+const { href, className } = Astro.props
 ---
 
-<a href={href} target="_blank" rel="noopener noreferrer">
+<a href={href} class={className} target="_blank" rel="noopener noreferrer">
   <slot />
-  <ExternalLinkIcon /></a
->
+</a>
