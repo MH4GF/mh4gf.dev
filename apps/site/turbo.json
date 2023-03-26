@@ -6,11 +6,26 @@
   ],
   "pipeline": {
     "dev": {},
-    "build": {},
-    "lint": {
-      "dependsOn": ["sync"]
+    "build": {
+      "outputs": [
+        "dist/**"
+      ]
     },
-    "format": {},
-    "test": {}
+    "lint": {
+      "dependsOn": [
+        "sync"
+      ]
+    },
+    "format": {
+      "dependsOn": [
+        "sync"
+      ]
+    },
+    "test": {},
+    "sync": {
+      "outputs": [
+        ".astro/**"
+      ]
+    }
   }
 }

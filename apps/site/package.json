@@ -2,6 +2,8 @@
   "name": "@mh4gf/site",
   "version": "2.1.0",
   "scripts": {
+    "setup": "run-s -clns setup:*",
+    "setup:playwright": "playwright install --with-deps",
     "dev": "astro dev",
     "start": "astro dev",
     "build": "astro build",
@@ -9,8 +11,12 @@
     "sync": "astro sync",
     "astro": "astro",
     "cz": "cz",
-    "lint": "eslint src --ext .astro,.tsx",
-    "format": "prettier -w --plugin-search-dir=. .",
+    "format": "run-s -clns format:*",
+    "format:eslint": "pnpm lint:eslint --fix",
+    "format:prettier": "prettier --cache --write . --plugin-search-dir=.",
+    "lint": "run-s -clns lint:*",
+    "lint:eslint": "eslint src --ext .astro,.tsx",
+    "lint:prettier": "prettier --cache --check .",
     "test": "playwright test"
   },
   "dependencies": {

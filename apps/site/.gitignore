@@ -24,3 +24,4 @@ pnpm-debug.log*
 
 # playwright
 test-results
+*-darwin.png

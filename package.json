@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
+    "setup": "turbo run setup",
     "lint": "turbo run lint",
     "format": "turbo run format",
     "dev": "turbo run dev",
@@ -15,6 +16,7 @@
   "author": "MH$GF",
   "devDependencies": {
     "@tsconfig/strictest": "^1.0.2",
+    "npm-run-all": "^4.1.5",
     "scaffdog": "^2.5.0",
     "turbo": "^1.8.5"
   }
